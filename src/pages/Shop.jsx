@@ -39,20 +39,24 @@ function Shop() {
   }
 
   return (
-    <main className="shop-page">
-        <h1>Our Shop</h1>
+  <main className="shop-page">
+    <section className="shop-header">
+      <p className="shop-label">EXPLORE OUR COLLECTION</p>
+      <h1>Our Shop</h1>
+      <p>Discover products worth adding to your collection.</p>
+    </section>
 
-        <div className="product-grid">
-        {products.map((product) => (
-            <ProductCard
-            key={product.id}
-            product={product}
-            onAddToCart={handleAddToCart}
-            />
-        ))}
-        </div>
-    </main>
-    );
+    <div className="product-grid">
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          onAddToCart={handleAddToCart}
+        />
+      ))}
+    </div>
+  </main>
+);
 }
 
 export default Shop;
